@@ -1,0 +1,9 @@
+[submodule "contracts"]
+	path = contracts
+	url = https://github.com/yourusername/debt-purchasing-contracts.git
+[submodule "backend"]
+	path = backend
+	url = https://github.com/yourusername/debt-purchasing-backend.git
+[submodule "frontend"]
+	path = frontend
+	url = https://github.com/yourusername/debt-purchasing-frontend.git 
