@@ -1,45 +1,63 @@
-# Debt Purchasing Platform
+# Debt Purchasing - Task Management
 
-A decentralized platform for buying and selling debt positions on Aave V3, enabling efficient debt trading and management.
+This repository serves as a centralized task management system for the Debt Purchasing Platform project.
 
-## Project Structure
+## Project Overview
 
-This repository is structured to separate concerns into three main components:
+The Debt Purchasing Platform consists of three main components:
 
-1. **debt-purchasing-contracts**: Smart contracts for managing debt positions
-2. **debt-purchasing-backend**: API server and automation bot
-3. **debt-purchasing-frontend**: User interface for interacting with the platform
+1. Smart Contracts (debt-purchasing-contracts)
+2. Backend Services (debt-purchasing-backend)
+3. Frontend Application (debt-purchasing-frontend)
 
-After initialization, these components will be available as Git submodules in:
+Each component is managed in its own separate repository.
 
-- `contracts/`
-- `backend/`
-- `frontend/`
+## Purpose of this Repository
+
+This repository is used to:
+
+- Track and organize tasks across all components
+- Coordinate development efforts
+- Manage project timelines
+- Store project documentation
+
+## Task Management Structure
+
+Tasks are organized by component and priority in the `tasks/` directory:
+
+- `tasks/contracts/` - Tasks related to smart contracts
+- `tasks/backend/` - Tasks related to backend services
+- `tasks/frontend/` - Tasks related to frontend application
+- `tasks/general/` - Tasks spanning multiple components
 
 ## Getting Started
 
-For detailed setup instructions, please see the `SETUP.md` file.
+### Prerequisites
 
-### Quick Start
+- Git
+- A text editor for updating task files
+
+### Installation
 
 ```bash
-# Initialize the project structure
-./scripts/init-all.sh
-
-# Build and set up each component
-make setup
-
-# Start the development environment
-make dev
+# Clone the repository
+git clone git@github.com:Debt-Purchasing/debt-purchasing-managements.git
+cd debt-purchasing-managements
 ```
 
-## Architecture Overview
+## Contributing
 
-The platform enables users to sell their debt positions under specific conditions, allowing buyers to acquire these positions profitably.
-
-- **Contracts**: Integrate with Aave V3 to manage debt positions, sales, and ownership
-- **Backend**: Indexes on-chain events, serves data to the frontend, and automates debt sales
-- **Frontend**: Provides interfaces for borrowers and buyers to interact with the platform
+1. Create a new branch for your task updates:
+   ```bash
+   git checkout -b task-update
+   ```
+2. Update the relevant task files
+3. Commit and push your changes
+   ```bash
+   git commit -m "Update tasks for [component]"
+   git push origin task-update
+   ```
+4. Create a pull request
 
 ## License
 

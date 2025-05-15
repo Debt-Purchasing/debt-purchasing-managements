@@ -1,34 +1,22 @@
 {
-  "name": "debt-purchasing",
+  "name": "debt-purchasing-managements",
   "version": "1.0.0",
-  "description": "Debt purchasing platform management repository",
+  "description": "Task management repository for the Debt Purchasing Platform",
   "scripts": {
-    "setup": "npm run setup:contracts && npm run setup:backend && npm run setup:frontend",
-    "setup:contracts": "cd contracts && forge install && forge build",
-    "setup:backend": "cd backend && npm install",
-    "setup:frontend": "cd frontend && npm install",
-    "build": "npm run build:contracts && npm run build:backend && npm run build:frontend",
-    "build:contracts": "cd contracts && forge build",
-    "build:backend": "cd backend && npm run build",
-    "build:frontend": "cd frontend && npm run build",
-    "test": "npm run test:contracts && npm run test:backend && npm run test:frontend",
-    "test:contracts": "cd contracts && forge test",
-    "test:backend": "cd backend && npm test",
-    "test:frontend": "cd frontend && npm test",
-    "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
-    "dev:backend": "cd backend && npm run dev",
-    "dev:frontend": "cd frontend && npm start"
+    "list-tasks": "make list-tasks",
+    "count-tasks": "make count-tasks",
+    "update-readme": "make update-readme",
+    "stats": "make stats",
+    "new-task": "node scripts/new-task.js"
   },
   "keywords": [
-    "ethereum",
-    "defi",
-    "debt",
-    "aave",
-    "monorepo"
+    "debt-purchasing",
+    "task-management",
+    "project-management"
   ],
   "author": "",
   "license": "MIT",
   "devDependencies": {
-    "concurrently": "^8.2.1"
+    "inquirer": "^8.2.5"
   }
 }

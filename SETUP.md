@@ -1,99 +1,83 @@
-# Setting Up the Debt Purchasing Platform
+# Setting Up the Task Management Repository
 
-This document provides detailed instructions on how to set up the Debt Purchasing Platform.
+This document provides instructions on how to set up and use the Task Management Repository.
 
 ## Prerequisites
 
 - Git
-- Node.js (v16+)
-- Foundry (for contracts)
-- MongoDB (for backend)
+- Text editor for task files
+- Markdown knowledge (for formatting task documents)
 
-## Option 1: Clone With Existing Submodules
-
-If all repositories are already set up in GitHub:
+## Installation
 
 ```bash
-# Clone the repository with all submodules
-git clone --recurse-submodules https://github.com/yourusername/debt-purchasing.git
-cd debt-purchasing
-
-# Install dependencies and build all components
-make setup
+# Clone the repository
+git clone git@github.com:Debt-Purchasing/debt-purchasing-managements.git
+cd debt-purchasing-managements
 ```
 
-## Option 2: Initialize From Scratch
+## Task Management Structure
 
-If you're setting up the repositories for the first time:
+Tasks are organized by component and priority. To get started, create the following directory structure:
 
 ```bash
-# 1. Clone this repository
-git clone https://github.com/yourusername/debt-purchasing.git
-cd debt-purchasing
-
-# 2. Make sure scripts are executable
-chmod +x scripts/*.sh
-
-# 3. Run the initialization script
-./scripts/init-all.sh
-
-# 4. Install dependencies and build all components
-make setup
+mkdir -p tasks/contracts tasks/backend tasks/frontend tasks/general
 ```
 
-## Manually Setting Up Each Repository
+## Creating Tasks
 
-If you prefer to set up each repository individually:
+1. Create a task file with a descriptive name:
 
-### Contracts
+   ```bash
+   touch tasks/contracts/implement_debt_vault.md
+   ```
 
-```bash
-# From the root directory
-./scripts/init-contracts.sh
-cd contracts
-forge install
-forge build
-```
+2. Use the following template for task files:
 
-### Backend
+   ```markdown
+   # Task: [Task Name]
 
-```bash
-# From the root directory
-./scripts/init-backend.sh
-cd backend
-npm install
-```
+   ## Description
 
-### Frontend
+   [Detailed description of the task]
 
-```bash
-# From the root directory
-./scripts/init-frontend.sh
-cd frontend
-npm install
-```
+   ## Acceptance Criteria
 
-## Development Workflow
+   - [ ] Criteria 1
+   - [ ] Criteria 2
+   - [ ] Criteria 3
 
-After setting up the repositories, you can start the development environment:
+   ## Dependencies
 
-```bash
-# Start backend and frontend development servers
-make dev
+   - [Any dependencies or prerequisites]
 
-# Or using npm
-npm run dev
-```
+   ## Estimated Effort
 
-## Additional Commands
+   [Time estimate]
 
-```bash
-# Clean all build artifacts
-make clean
+   ## Status
 
-# Run all tests
-make test
+   Not Started | In Progress | Completed
 
-# Build all components for production
-make build
-```
+   ## Notes
+
+   [Additional notes or context]
+   ```
+
+## Tracking Task Progress
+
+To track the progress of tasks:
+
+1. Update the status in the task file
+2. Commit and push changes
+3. Use GitHub issues for discussion and tracking
+
+## Coordinating with Component Repositories
+
+While this repository tracks tasks, actual development happens in the component repositories:
+
+- [debt-purchasing-contracts](https://github.com/Debt-Purchasing/debt-purchasing-contracts)
+- [debt-purchasing-backend](https://github.com/Debt-Purchasing/debt-purchasing-backend)
+- [debt-purchasing-frontend](https://github.com/Debt-Purchasing/debt-purchasing-frontend)
+
+Link to relevant tasks in your commits and pull requests by referencing the task file path.
